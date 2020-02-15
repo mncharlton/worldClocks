@@ -1,0 +1,88 @@
+html {
+  text-align: center;
+  background-image: url('./sea.jpg');
+  background-size: cover;
+  font-family: monospace;
+}
+
+.clock {
+  width: 30em;
+  height: 30em;
+  border: .2em solid black;
+  border-radius: 50%;
+  position: relative;
+  transform: translateY(-3px);
+  display: inline-block;
+  top: 10%;
+  text-align: center;
+  margin: 10px;
+}
+
+.clock-centre {
+  position:absolute;
+  background-color: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 30%;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.25em;
+}
+
+.hand {
+  position: absolute;
+  background-color: black;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.minutes {
+  width:40%;
+  left: 10%;
+  height:6px;
+}
+
+.hours {
+  width:30%;
+  left: 20%;
+  height:8px;
+}
+
+.seconds {
+  width:49%;
+  left: 1%;
+  height:4px;
+}
+
+
+span {
+  font-size: 2em
+}
+
+.number {
+  position: absolute;
+  clear:both;
+}
+
+.twelve {
+  margin-left: -20px;
+}
+
+.three {
+  right: 5;
+  top:50%;
+  margin-top:-15px;
+}
+
+.six {
+  bottom:0;
+  margin-left: -10px;
+
+}
+
+.nine {
+  left: 5;
+  top:50%;
+  margin-top:-15px;
+}
