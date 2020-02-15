@@ -11,12 +11,15 @@ window.onload = function() {
   timezones.forEach(timezone => {
     timezoneSelector.innerHTML += `<option value='${timezone}'>${timezone}</option>`
   })
-  addClock('local')
+  addClock('local', 'Local Time')
   setInterval(runClock, 1000)
 }
 
 function addClock(timezone) {
   const clockHTML = `<div class="clock" data-timezone="${timezone}">
+function addClock(timezone, label) {
+  const clockHTML = `<div class='clock-wrapper'>
+    <div class="clock" data-timezone="${timezone}">
     <span class='number twelve'>12</span>
     <span class='number three'>3</span>
     <span class='number six'>6</span>
@@ -26,6 +29,9 @@ function addClock(timezone) {
     <div class="hand seconds" data-timezone="${timezone}"></div>
     <div class="hand hours" data-timezone="${timezone}"></div>
   </div>`
+    </div>
+    <span class='clockName'>${label}</span></br>
+    </div>`
   const clocks = document.querySelector('.clocks')
 
   clocks.innerHTML += clockHTML
@@ -33,8 +39,9 @@ function addClock(timezone) {
 
 function newClock() {
   const timezoneSelector = document.querySelector('#timezones')
-  let timezone = timezoneSelector.options[timezoneSelector.selectedIndex].text
-  addClock(timezone)
+  const timezone = timezoneSelector.options[timezoneSelector.selectedIndex].text
+  const clockName = document.querySelector('#clockName').value
+  ; (clockName.length) ? addClock(timezone, clockName) : addClock(timezone, ' ')
 }
 
 
