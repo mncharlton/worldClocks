@@ -5,17 +5,28 @@ html {
   font-family: monospace;
 }
 
+.clock-wrapper{
+  width: 30em;
+  height: 40em;
+  position: relative;
+  border: .1em solid grey;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 .clock {
   width: 30em;
   height: 30em;
   border: .2em solid black;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   transform: translateY(-3px);
-  display: inline-block;
   top: 10%;
   text-align: center;
-  margin: 10px;
 }
 
 .clock-centre {
@@ -85,4 +96,9 @@ span {
   left: 5;
   top:50%;
   margin-top:-15px;
+}
+
+.clockLabel {
+  /* position: absolute;
+  bottom: 0; */
 }
