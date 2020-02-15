@@ -7,7 +7,7 @@ html {
 
 .clock-wrapper{
   width: 30em;
-  height: 40em;
+  height: 35em;
   position: relative;
   border: .1em solid grey;
   text-align: center;
@@ -25,7 +25,7 @@ html {
   border-radius: 50%;
   position: absolute;
   transform: translateY(-3px);
-  top: 10%;
+  top: 12%;
   text-align: center;
 }
 
