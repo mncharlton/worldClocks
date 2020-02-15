@@ -26,9 +26,9 @@ function addClock(timezone) {
     <div class="hand seconds" data-timezone="${timezone}"></div>
     <div class="hand hours" data-timezone="${timezone}"></div>
   </div>`
-  const body = document.querySelector('body')
+  const clocks = document.querySelector('.clocks')
 
-  body.innerHTML += clockHTML
+  clocks.innerHTML += clockHTML
 }
 
 function newClock() {
