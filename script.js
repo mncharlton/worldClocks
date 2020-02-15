@@ -67,12 +67,17 @@ function runClock() {
     const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90;
     const hoursDegrees = ((hours / 12) * 360) + ((minutes/60)*30) + 90;
 
-    const hoursHand = document.querySelector(`.hours[data-timezone="${timezone}"]`)
-    const minutesHand = document.querySelector(`.minutes[data-timezone="${timezone}"]`)
-    const secondsHand = document.querySelector(`.seconds[data-timezone="${timezone}"]`)
-
-    hoursHand.style.transform = `rotate(${hoursDegrees}deg)`
-    minutesHand.style.transform = `rotate(${minutesDegrees}deg)`
-    secondsHand.style.transform = `rotate(${secondsDegrees}deg)`
+    const hourHands = document.querySelectorAll(`.hours[data-timezone="${timezone}"]`)
+    hourHands.forEach(hand => {
+      hand.style.transform = `rotate(${hoursDegrees}deg)`
+    })
+    const minuteHands = document.querySelectorAll(`.minutes[data-timezone="${timezone}"]`)
+    minuteHands.forEach(hand => {
+      hand.style.transform = `rotate(${minutesDegrees}deg)`
+    })
+    const secondHands = document.querySelectorAll(`.seconds[data-timezone="${timezone}"]`)
+    secondHands.forEach(hand => {
+      hand.style.transform = `rotate(${secondsDegrees}deg)`
+    })
   })
 }
