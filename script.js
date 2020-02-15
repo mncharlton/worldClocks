@@ -22,9 +22,9 @@ function addClock(timezone) {
     <span class='number six'>6</span>
     <span class='number nine'>9</span>
     <div class="clock-centre"></div>
-    <div class="hand minutes"></div>
-    <div class="hand seconds"></div>
-    <div class="hand hours"></div>
+    <div class="hand minutes" data-timezone="${timezone}"></div>
+    <div class="hand seconds" data-timezone="${timezone}"></div>
+    <div class="hand hours" data-timezone="${timezone}"></div>
   </div>`
   const body = document.querySelector('body')
 
@@ -64,9 +64,9 @@ function runClock() {
     const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90;
     const hoursDegrees = ((hours / 12) * 360) + ((minutes/60)*30) + 90;
 
-    const hoursHand = document.querySelector('.hours')
-    const minutesHand = document.querySelector('.minutes')
-    const secondsHand = document.querySelector('.seconds')
+    const hoursHand = document.querySelector(`.hours[data-timezone="${timezone}"]`)
+    const minutesHand = document.querySelector(`.minutes[data-timezone="${timezone}"]`)
+    const secondsHand = document.querySelector(`.seconds[data-timezone="${timezone}"]`)
 
     hoursHand.style.transform = `rotate(${hoursDegrees}deg)`
     minutesHand.style.transform = `rotate(${minutesDegrees}deg)`
