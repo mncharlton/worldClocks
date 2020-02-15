@@ -34,7 +34,6 @@ function addClock(timezone) {
 function newClock() {
   const timezoneSelector = document.querySelector('#timezones')
   let timezone = timezoneSelector.options[timezoneSelector.selectedIndex].text
-  console.log(timezone)
   addClock(timezone)
 }
 
@@ -47,14 +46,11 @@ function runClock() {
     timezones.push(clocks[i].getAttribute('data-timezone'))
   }
 
-  // console.log(timezones)
 
   timezones.forEach(timezone => {
-    console.log(timezone)
     let now
     (timezone === 'local') ? now = new Date() : now = new Date().toLocaleString("en-US", {timeZone: `${timezone}`})
     now = new Date(now)
-    console.log(now)
 
     const seconds = now.getSeconds()
     const minutes = now.getMinutes()
