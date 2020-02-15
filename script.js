@@ -31,6 +31,7 @@ function addClock(timezone, label) {
   </div>`
     </div>
     <span class='clockName'>${label}</span></br>
+    <button onClick='deleteClock(this)'>Delete</button>
     </div>`
   const clocks = document.querySelector('.clocks')
 
@@ -80,4 +81,8 @@ function runClock() {
       hand.style.transform = `rotate(${secondsDegrees}deg)`
     })
   })
+}
+
+function deleteClock(param) {
+  param.parentElement.remove()
 }
