@@ -15,8 +15,6 @@ window.onload = function() {
   setInterval(runClock, 1000)
 }
 
-function addClock(timezone) {
-  const clockHTML = `<div class="clock" data-timezone="${timezone}">
 function addClock(timezone, label) {
   const clockHTML = `<div class='clock-wrapper'>
     <div class="clock" data-timezone="${timezone}">
@@ -28,7 +26,6 @@ function addClock(timezone, label) {
     <div class="hand minutes" data-timezone="${timezone}"></div>
     <div class="hand seconds" data-timezone="${timezone}"></div>
     <div class="hand hours" data-timezone="${timezone}"></div>
-  </div>`
     </div>
     <span class='clockName'>${label}</span></br>
     <button onClick='deleteClock(this)'>Delete</button>
@@ -53,7 +50,6 @@ function runClock() {
   for (let i = 0; i < clocks.length; i++) {
     timezones.push(clocks[i].getAttribute('data-timezone'))
   }
-
 
   timezones.forEach(timezone => {
     let now
