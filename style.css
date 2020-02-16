@@ -74,6 +74,7 @@ span {
 .number {
   position: absolute;
   clear:both;
+  font-weight: bold;
 }
 
 .twelve {
