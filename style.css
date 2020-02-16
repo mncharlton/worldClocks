@@ -66,15 +66,11 @@ html {
   height:4px;
 }
 
-
-span {
-  font-size: 2em
-}
-
 .number {
   position: absolute;
   clear:both;
   font-weight: bold;
+  font-size: 2em;
 }
 
 .twelve {
@@ -99,7 +95,14 @@ span {
   margin-top:-15px;
 }
 
-.clockLabel {
-  /* position: absolute;
-  bottom: 0; */
+.clockName {
+  font-size: 2em;
+}
+
+.delete {
+  position:absolute;
+  right:0;
+  margin-right: 2px;
+  color: red;
+  cursor:pointer;
 }

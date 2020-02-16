@@ -21,8 +21,8 @@ function addClock(timezone, label) {
     <div class="hand seconds" data-timezone="${timezone}"></div>
     <div class="hand hours" data-timezone="${timezone}"></div>
     </div>
-    <span class='clockName'>${label}</span></br>
-    <button onClick='deleteClock(this)'>Delete</button>
+    <span class='clockName'>${label}</span>
+    <span class='delete' onClick='deleteClock(this)'>X</span>
     </div>`
   const clocks = document.querySelector('.clocks')
 
