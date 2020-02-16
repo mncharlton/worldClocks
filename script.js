@@ -1,9 +1,3 @@
-//import {timezones} from './timezones.js'
-
-const timezones = [
-  'America/New_York',
-  'America/Los_Angeles'
-]
 
 
 window.onload = function() {
