@@ -33,7 +33,7 @@ function newClock() {
   const timezoneSelector = document.querySelector('#timezones')
   const timezone = timezoneSelector.options[timezoneSelector.selectedIndex].text
   const clockName = document.querySelector('#clockName').value
-  ; (clockName.length) ? addClock(timezone, clockName) : addClock(timezone, ' ')
+  ; (clockName.length) ? addClock(timezone, clockName) : alert('Make sure you add a name for your new clock!')
 }
 
 
