@@ -27,6 +27,7 @@ function addClock(timezone, label) {
   const clocks = document.querySelector('.clocks')
 
   clocks.innerHTML += clockHTML
+  clockName.value = ""
 }
 
 function newClock() {
