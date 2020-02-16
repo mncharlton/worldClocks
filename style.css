@@ -106,3 +106,7 @@ html {
   color: red;
   cursor:pointer;
 }
+
+button {
+  cursor: pointer;
+}

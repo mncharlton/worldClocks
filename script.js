@@ -6,6 +6,10 @@ window.onload = function() {
     timezoneSelector.innerHTML += `<option value='${timezone}'>${timezone}</option>`
   })
   addClock('local', 'Local Time')
+  const clockName = document.querySelector('#clockName')
+  clockName.addEventListener('keydown',e => {
+    (e.keyCode === 13) ? newClock() : null
+  })
   setInterval(runClock, 1000)
 }
 
@@ -34,7 +38,7 @@ function newClock() {
   const timezoneSelector = document.querySelector('#timezones')
   const timezone = timezoneSelector.options[timezoneSelector.selectedIndex].text
   const clockName = document.querySelector('#clockName').value
-  ; (clockName.length) ? addClock(timezone, clockName) : alert('Make sure you add a name for your new clock!')
+  ; (clockName.length && timezone.length) ? addClock(timezone, clockName) : alert('Make sure you add a name and select a timezone!')
 }
 
 
